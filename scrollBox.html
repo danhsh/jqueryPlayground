@@ -21,6 +21,11 @@
 				var $c = $(this).parent().next();
 				$c.stop().scrollTo('li:eq('+index+')', {duration:2500, easing:'elasout',axis:$c.attr('id')});
 			});	
+            $('div.container a').click(function(){
+			    var $c = $(this).parents('.container');
+			 	$c.stop().scrollTo( 0, {duration:2000,axis:$c.attr('id'), queue:true} );
+			 	return false;
+		    });
 		});
 	</script>
 </head>
